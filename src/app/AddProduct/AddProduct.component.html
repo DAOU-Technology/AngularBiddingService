@@ -17,7 +17,7 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="addTransactionModalLabel">Create Transaction</h4>
-        <p class="modal-intro">Enter the required values below.</p>
+        <p class="modal-intro">필수 정보를 입력해주세요.</p>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
@@ -27,7 +27,7 @@
 
             
               <div class="form-group text-left">
-                <label for="productId">productId</label>
+                <label for="productId">상품 고유번호</label>
                 
                   <input formControlName="productId" type="text" class="form-control">
                 
@@ -37,7 +37,7 @@
 
             
               <div class="form-group text-left">
-                <label for="description">description</label>
+                <label for="description">상세 정보</label>
                 
                   <input formControlName="description" type="text" class="form-control">
                 
@@ -47,7 +47,7 @@
 
             
               <div class="form-group text-left">
-                <label for="owner">owner</label>
+                <label for="owner">판매자 정보</label>
                 
                     <textarea formControlName="owner" class="form-control" rows="3"></textarea>
                 
@@ -63,8 +63,8 @@
 
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+            <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">등록</button>
         </div>
       </form>
     </div>
@@ -73,12 +73,12 @@
 
 <div class="container col-md-6">
     <div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-        <strong>Error:</strong> {{errorMessage}}
+        <strong>오류 메시지:</strong> {{errorMessage}}
     </div>
 
   <div class="row">
     <div class="col-md-12">
-        <h1 class="transaction-title" id='transactionName'>AddProduct</h1>
+        <h1 class="transaction-title" id='transactionName'>상품 등록</h1>
     </div>
   </div>
   <br>
@@ -86,20 +86,20 @@
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-12">
-          When invoked, this transaction will have the following attributes:
+			상품 등록이 완료되면 다음과 같은 정보를 갖게 됩니다.
           <br>
           <ul>
             
               
-                <li><span class="attribute"><b>productId</b></span></li>
+                <li><span class="attribute"><b>상품 고유번호</b></span></li>
               
             
               
-                <li><span class="attribute"><b>description</b></span></li>
+                <li><span class="attribute"><b>상세 정보</b></span></li>
               
             
               
-                <li><span class="attribute"><b>owner</b></span></li>
+                <li><span class="attribute"><b>판매자 정보</b></span></li>
               
             
               
@@ -109,7 +109,7 @@
           </ul>
         </div>
       </div>
-      <button (click)="resetForm();" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">Invoke</button>
+      <button (click)="resetForm();" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">거래 시작</button>
     </div>
   </div>
 </div>
