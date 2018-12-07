@@ -16,106 +16,106 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addAssetModalLabel">Create asset</h4>
-          <p class="modal-intro">Enter the required values below.</p>
+        <h4 class="modal-title" id="addAssetModalLabel">상품 생성</h4>
+          <p class="modal-intro">아래 요구사항을 입력해주세요.</p>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
 
 
-          
 
-            
+
+
               <div class="form-group text-left">
-                <label for="listingId">listingId</label>
-                
+                <label for="listingId">리스팅ID</label>
+
                   <input formControlName="listingId" type="text" class="form-control">
-                
-              </div>
-            
-          
 
-            
+              </div>
+
+
+
+
               <div class="form-group text-left">
-                <label for="reservePrice">reservePrice</label>
-                
-                  <input formControlName="reservePrice" type="number" step='any' class="form-control">
-                
-              </div>
-            
-          
+                <label for="reservePrice">예약가격</label>
 
-            
-              <label for="state">state</label>
+                  <input formControlName="reservePrice" type="number" step='any' class="form-control">
+
+              </div>
+
+
+
+
+              <label for="state">상태</label>
               <div class="checkbox">
-                
+
                   <label>
                     <input
-                      
+
                         formControlName="state"
-                      
+
                       name="state"
                       value="FOR_SALE"
                       type="radio"
-                      
+
                     />
-                    FOR_SALE
+                    판매중
                   </label>
-                
+
                   <label>
                     <input
-                      
+
                         formControlName="state"
-                      
+
                       name="state"
                       value="RESERVE_NOT_MET"
                       type="radio"
-                      
+
                     />
-                    RESERVE_NOT_MET
+                    예약가능
                   </label>
-                
+
                   <label>
                     <input
-                      
+
                         formControlName="state"
-                      
+
                       name="state"
                       value="SOLD"
                       type="radio"
-                      
+
                     />
-                    SOLD
+                    판매완료
                   </label>
-                
-              </div>
-            
-          
 
-            
+              </div>
+
+
+
+
               <div class="form-group text-left">
-                <label for="offers">offers</label>
-                
+                <label for="offers">제안들</label>
+
                     <textarea formControlName="offers" class="form-control" rows="3"></textarea>
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="product">product</label>
-                
-                    <textarea formControlName="product" class="form-control" rows="3"></textarea>
-                
               </div>
-            
-          
+
+
+
+
+              <div class="form-group text-left">
+                <label for="product">상품</label>
+
+                    <textarea formControlName="product" class="form-control" rows="3"></textarea>
+
+              </div>
+
+
 
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">확인</button>
 
         </div>
       </form>
@@ -131,116 +131,116 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="updateAssetModalLabel">Update Asset</h4>
+        <h4 class="modal-title" id="updateAssetModalLabel">상품 업데이트</h4>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
 
 
-          
+
             <div class="form-group text-left">
-              <label for="listingId">listingId</label>
-              
-              
-                <input [ngModel]="listingId" formControlName="listingId" class="form-control" disabled="disabled">  
-              
+              <label for="listingId">리스팅ID</label>
+
+
+                <input [ngModel]="listingId" formControlName="listingId" class="form-control" disabled="disabled">
+
 
             </div>
-          
+
             <div class="form-group text-left">
-              <label for="reservePrice">reservePrice</label>
-              
-              
+              <label for="reservePrice">예약가격</label>
+
+
                 <input [ngModel]="reservePrice" formControlName="reservePrice" type="number" step='any' class="form-control">
-              
+
 
             </div>
-          
+
             <div class="form-group text-left">
-              <label for="state">state</label>
-              
-              
-                
+              <label for="state">상태</label>
+
+
+
                   <div class="row">
                     <div class="col-xs-12 checkbox">
-                    
+
                       <label>
                         <input
-                          
+
                             formControlName="state"
                             [ngModel]="state"
-                          
+
                           name="state"
                           value="FOR_SALE"
                           type="radio"
-                          
+
                         />
-                        FOR_SALE
+                        판매중
                       </label>
-                    
+
                       <label>
                         <input
-                          
+
                             formControlName="state"
                             [ngModel]="state"
-                          
+
                           name="state"
                           value="RESERVE_NOT_MET"
                           type="radio"
-                          
+
                         />
-                        RESERVE_NOT_MET
+                        예약가능
                       </label>
-                    
+
                       <label>
                         <input
-                          
+
                             formControlName="state"
                             [ngModel]="state"
-                          
+
                           name="state"
                           value="SOLD"
                           type="radio"
-                          
+
                         />
-                        SOLD
+                        판매완료
                       </label>
-                    
+
                     </div>
                   </div>
-                
-              
+
+
 
             </div>
-          
+
             <div class="form-group text-left">
-              <label for="offers">offers</label>
-              
-              
-                
+              <label for="offers">제안들</label>
+
+
+
                   <textarea [ngModel]="offers" formControlName="offers" class="form-control" rows="3"></textarea>
-                
-              
+
+
 
             </div>
-          
+
             <div class="form-group text-left">
-              <label for="product">product</label>
-              
-              
-                
+              <label for="product">상품</label>
+
+
+
                   <textarea [ngModel]="product" formControlName="product" class="form-control" rows="3"></textarea>
-                
-              
+
+
 
             </div>
-          
+
 
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button (click)="updateAsset(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+          <button (click)="updateAsset(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">확인</button>
         </div>
       </form>
     </div>
@@ -258,11 +258,11 @@
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
-          Are you sure you want to delete this asset?
+          이 상품을 정말 삭제하시겠습니까?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-          <button (click)="deleteAsset()" type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">아니요</button>
+          <button (click)="deleteAsset()" type="submit" class="btn btn-danger" data-dismiss="modal">예</button>
         </div>
       </form>
     </div>
@@ -281,12 +281,12 @@
 
 <div class="container">
 	<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-		<strong>Error:</strong> {{errorMessage}}
+		<strong>오류 메시지:</strong> {{errorMessage}}
 	</div>
-  
+
   <div class="row">
     <div class="col-md-9">
-        <h1 class="asset-title" id='assetName'>ProductListing</h1>
+        <h1 class="asset-title" id='assetName'>상품리스팅정보</h1>
     </div>
     <div class="col-md-3">
       <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAssetModal">
@@ -305,34 +305,34 @@
       <table class="table table-responsive">
         <thead class="thead">
           <tr class="thead-cols">
-            
-                <th class="info">listingId</th>
-            
-                <th class="info">reservePrice</th>
-            
-                <th class="info">state</th>
-            
-                <th class="info">offers</th>
-            
-                <th class="info">product</th>
-            
+
+                <th class="info">리스팅ID</th>
+
+                <th class="info">예약가격</th>
+
+                <th class="info">상태</th>
+
+                <th class="info">제안들</th>
+
+                <th class="info">상품</th>
+
               <th class="info-actions">Actions</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let asset of allAssets">
 
-            
+
                 <td class="asset-properties">{{asset.listingId}}</td>
-            
+
                 <td class="asset-properties">{{asset.reservePrice}}</td>
-            
+
                 <td class="asset-properties">{{asset.state}}</td>
-            
+
                 <td class="asset-properties">{{asset.offers}}</td>
-            
+
                 <td class="asset-properties">{{asset.product}}</td>
-            
+
             <td>
               <button (click)="getForm(asset.listingId);" type="button" class="btn btn-update" data-toggle="modal" data-target="#updateAssetModal">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

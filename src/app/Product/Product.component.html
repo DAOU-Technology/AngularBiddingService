@@ -16,49 +16,49 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addAssetModalLabel">Create asset</h4>
-          <p class="modal-intro">Enter the required values below.</p>
+        <h4 class="modal-title" id="addAssetModalLabel">상품 생성</h4>
+          <p class="modal-intro">아래 요구사항을 입력해주세요.</p>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
 
 
-          
 
-            
+
+
               <div class="form-group text-left">
                 <label for="productId">상품ID</label>
-                
-                  <input formControlName="productId" type="text" class="form-control">
-                
-              </div>
-            
-          
 
-            
+                  <input formControlName="productId" type="text" class="form-control">
+
+              </div>
+
+
+
+
               <div class="form-group text-left">
                 <label for="description">설명</label>
-                
-                  <input formControlName="description" type="text" class="form-control">
-                
-              </div>
-            
-          
 
-            
-              <div class="form-group text-left">
-                <label for="owner">주인</label>
-                
-                    <textarea formControlName="owner" class="form-control" rows="3"></textarea>
-                
+                  <input formControlName="description" type="text" class="form-control">
+
               </div>
-            
-          
+
+
+
+
+              <div class="form-group text-left">
+                <label for="owner">소유자</label>
+
+                    <textarea formControlName="owner" class="form-control" rows="3"></textarea>
+
+              </div>
+
+
 
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+          <button (click)="addAsset(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">확인</button>
 
         </div>
       </form>
@@ -80,42 +80,42 @@
         <div class="modal-body">
 
 
-          
+
             <div class="form-group text-left">
               <label for="productId">상품ID</label>
-              
-              
-                <input [ngModel]="productId" formControlName="productId" class="form-control" disabled="disabled">  
-              
+
+
+                <input [ngModel]="productId" formControlName="productId" class="form-control" disabled="disabled">
+
 
             </div>
-          
+
             <div class="form-group text-left">
               <label for="description">설명</label>
-              
-              
+
+
                 <input [ngModel]="description"formControlName="description" type="text" class="form-control">
-              
+
 
             </div>
-          
+
             <div class="form-group text-left">
-              <label for="owner">주</label>
-              
-              
-                
+              <label for="owner">소유자</label>
+
+
+
                   <textarea [ngModel]="owner" formControlName="owner" class="form-control" rows="3"></textarea>
-                
-              
+
+
 
             </div>
-          
+
 
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button (click)="updateAsset(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+          <button (click)="updateAsset(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">제출</button>
         </div>
       </form>
     </div>
@@ -129,15 +129,15 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="deleteAssetModalLabel">Delete Asset</h4>
+        <h4 class="modal-title" id="deleteAssetModalLabel">상품 삭제</h4>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
-          Are you sure you want to delete this asset?
+          이 상품을 정말 삭제하실 건가요?
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-          <button (click)="deleteAsset()" type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">아니요</button>
+          <button (click)="deleteAsset()" type="submit" class="btn btn-danger" data-dismiss="modal">네</button>
         </div>
       </form>
     </div>
@@ -156,12 +156,12 @@
 
 <div class="container">
 	<div *ngIf="errorMessage" class="alert alert-danger" role="alert">
-		<strong>Error:</strong> {{errorMessage}}
+		<strong>오류 메시지:</strong> {{errorMessage}}
 	</div>
-  
+
   <div class="row">
     <div class="col-md-9">
-        <h1 class="asset-title" id='assetName'>Product</h1>
+        <h1 class="asset-title" id='assetName'>상품</h1>
     </div>
     <div class="col-md-3">
       <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addAssetModal">
@@ -170,7 +170,7 @@
                 <path fill-rule="evenodd" d="M5.5,4.5 L9.5,4.5 L10,4.5 L10,5.5 L9.5,5.5 L5.5,5.5 L5.5,9.5 L5.5,10 L4.5,10 L4.5,9.5 L4.5,5.5 L0.5,5.5 L0,5.5 L0,4.5 L0.5,4.5 L4.5,4.5 L4.5,0.5 L4.5,0 L5.5,0 L5.5,0.5 L5.5,4.5 Z"/>
               </svg>
           </span>
-        Create Asset
+        상품 생성
       </button>
     </div>
   </div>
@@ -180,26 +180,26 @@
       <table class="table table-responsive">
         <thead class="thead">
           <tr class="thead-cols">
-            
+
                 <th class="info">상품명</th>
-            
+
                 <th class="info">설명</th>
-            
-                <th class="info">주인</th>
-            
+
+                <th class="info">소유자</th>
+
               <th class="info-actions">이력</th>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let asset of allAssets">
 
-            
+
                 <td class="asset-properties">{{asset.productId}}</td>
-            
+
                 <td class="asset-properties">{{asset.description}}</td>
-            
+
                 <td class="asset-properties">{{asset.owner}}</td>
-            
+
             <td>
               <button (click)="getForm(asset.productId);" type="button" class="btn btn-update" data-toggle="modal" data-target="#updateAssetModal">
                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
