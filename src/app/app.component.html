@@ -15,26 +15,26 @@
     <div class="container-fluid">
       <div class="navbar-header">
         <p class="network-name">bidding-service@0.0.2.bna</p>
-        <p class="navbar-brand">angular-bidding-service</p>
+        <p class="navbar-brand">경매서비스</p>
       </div>
       <ul class="nav navbar-nav">
         <li class="dropdown active">
-            <a class="dropdown-toggle" data-toggle="dropdown">Assets</a>
+            <a class="dropdown-toggle" data-toggle="dropdown">상품관리</a>
             <ul class="dropdown-menu scrollable-menu">
               
-              <li><a [routerLink]="['/Product']">Product</a></li>
+              <li><a [routerLink]="['/Product']">상품</a></li>
               
-              <li><a [routerLink]="['/ProductListing']">ProductListing</a></li>
+              <li><a [routerLink]="['/ProductListing']">상품리스트</a></li>
               
             </ul>
         </li>
         <li class="dropdown active">
-          <a class="dropdown-toggle" data-toggle="dropdown">Participants</a>
+          <a class="dropdown-toggle" data-toggle="dropdown">멤버관리</a>
           <ul class="dropdown-menu scrollable-menu">
             
-            <li><a [routerLink]="['/Seller']">Seller</a></li>
+            <li><a [routerLink]="['/Seller']">판매자</a></li>
             
-            <li><a [routerLink]="['/Member']">Member</a></li>
+            <li><a [routerLink]="['/Member']">멤버</a></li>
             
           </ul>
       </li>
@@ -42,13 +42,13 @@
         <a class="dropdown-toggle" data-toggle="dropdown">Transactions</a>
         <ul class="dropdown-menu scrollable-menu">
           
-          <li><a [routerLink]="['/Offer']">Offer</a></li>
+          <li><a [routerLink]="['/Offer']">입찰</a></li>
           
-          <li><a [routerLink]="['/CloseBidding']">CloseBidding</a></li>
+          <li><a [routerLink]="['/CloseBidding']">경매종료</a></li>
           
-          <li><a [routerLink]="['/StartBidding']">StartBidding</a></li>
+          <li><a [routerLink]="['/StartBidding']">경매시작</a></li>
           
-          <li><a [routerLink]="['/AddProduct']">AddProduct</a></li>
+          <li><a [routerLink]="['/AddProduct']">상품등록</a></li>
           
         </ul>
     </li>

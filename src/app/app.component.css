@@ -70,7 +70,7 @@
 }
 
 .navbar-nav > li > .active:hover > a {
-    color: #6C4CC4 !important;
+    color: #005f69 !important;
 }
 
 .navbar-nav > li:hover > a {
@@ -79,7 +79,7 @@
 
 .navbar-nav .active > a {
     background-color: #fff;
-    color: #6C4CC4 !important;
+    color: #005f69 !important;
 }
 
 .dropdown-menu {
