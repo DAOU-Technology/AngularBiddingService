@@ -53,8 +53,8 @@
 
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+            <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">확인</button>
         </div>
       </form>
     </div>
@@ -76,16 +76,16 @@
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-12">
-          When invoked, this transaction will have the following attributes:
+          이 트랜잭션을 생성하면 다음과 같은 속성을 갖게됩니다.
           <br>
           <ul>
             
               
-                <li><span class="attribute"><b>commodity</b></span></li>
+                <li><span class="attribute"><b>상품</b></span></li>
               
             
               
-                <li><span class="attribute"><b>newOwner</b></span></li>
+                <li><span class="attribute"><b>새 소유자</b></span></li>
               
             
               
@@ -95,7 +95,7 @@
           </ul>
         </div>
       </div>
-      <button (click)="resetForm();" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">Invoke</button>
+      <button (click)="resetForm();" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">생성</button>
     </div>
   </div>
 </div>

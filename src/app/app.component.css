@@ -19,7 +19,7 @@
 
 .navbar {
     border-radius: 0px;
-    background: #F3F3F3;
+    background: #20bec6;
     border: none;
 }
 
@@ -34,11 +34,11 @@
     letter-spacing: 0.28px;
     padding: 0px;
     margin-left: 0px !important;
-    color: #000;
+    color: rgb(255, 255, 255);
 }
 
 .navbar-brand:hover {
-    color: #000;
+    color: rgb(255, 255, 255);
 }
 
 .network-name {
