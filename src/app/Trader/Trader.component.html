@@ -16,8 +16,8 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="addParticipantModalLabel">Create participant</h4>
-            <p class="modal-intro">Enter the required values below.</p>
+          <h4 class="modal-title" id="addParticipantModalLabel">참가자 생성</h4>
+            <p class="modal-intro">아래에 필요한 값을 입력하십시오.</p>
         </div>
         <form [formGroup]="myForm">
           <div class="modal-body">
@@ -27,7 +27,7 @@
   
               
                 <div class="form-group text-left">
-                  <label for="tradeId">tradeId</label>
+                  <label for="tradeId">거래 ID</label>
                   
                     <input formControlName="tradeId" type="text" class="form-control">
                   
@@ -37,7 +37,7 @@
   
               
                 <div class="form-group text-left">
-                  <label for="firstName">firstName</label>
+                  <label for="firstName">이름</label>
                   
                     <input formControlName="firstName" type="text" class="form-control">
                   
@@ -47,7 +47,7 @@
   
               
                 <div class="form-group text-left">
-                  <label for="lastName">lastName</label>
+                  <label for="lastName">성</label>
                   
                     <input formControlName="lastName" type="text" class="form-control">
                   
@@ -57,8 +57,8 @@
   
           </div>
           <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button (click)="addParticipant(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+            <button (click)="addParticipant(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">확인</button>
   
           </div>
         </form>
@@ -74,7 +74,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="updateParticipantModalLabel">Update Participant</h4>
+          <h4 class="modal-title" id="updateParticipantModalLabel">참가자 수정</h4>
         </div>
         <form [formGroup]="myForm">
           <div class="modal-body">
@@ -82,7 +82,7 @@
   
             
               <div class="form-group text-left">
-                <label for="tradeId">tradeId</label>
+                <label for="tradeId">거래 ID</label>
   
                 
                   <input [ngModel]="tradeId" formControlName="tradeId" class="form-control" disabled="disabled">  
@@ -91,7 +91,7 @@
               </div>
             
               <div class="form-group text-left">
-                <label for="firstName">firstName</label>
+                <label for="firstName">이름</label>
   
                 
                   <input [ngModel]="firstName"formControlName="firstName" type="text" class="form-control">
@@ -100,7 +100,7 @@
               </div>
             
               <div class="form-group text-left">
-                <label for="lastName">lastName</label>
+                <label for="lastName">성</label>
   
                 
                   <input [ngModel]="lastName"formControlName="lastName" type="text" class="form-control">
@@ -112,8 +112,8 @@
   
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button (click)="updateParticipant(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">Submit</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+            <button (click)="updateParticipant(myForm)" type="submit" class="btn btn-success" data-dismiss="modal">수정</button>
           </div>
         </form>
       </div>
@@ -127,15 +127,15 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          <h4 class="modal-title" id="deleteParticipantModalLabel">Delete Participant</h4>
+          <h4 class="modal-title" id="deleteParticipantModalLabel">참가자 삭제</h4>
         </div>
         <form [formGroup]="myForm">
           <div class="modal-body">
-            Are you sure you want to delete this participant?
+            이 참가자를 삭제 하시겠습니까?
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
-            <button (click)="deleteParticipant()" type="submit" class="btn btn-danger" data-dismiss="modal">Yes</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">아니요</button>
+            <button (click)="deleteParticipant()" type="submit" class="btn btn-danger" data-dismiss="modal">예</button>
           </div>
         </form>
       </div>
@@ -168,7 +168,7 @@
                   <path fill-rule="evenodd" d="M5.5,4.5 L9.5,4.5 L10,4.5 L10,5.5 L9.5,5.5 L5.5,5.5 L5.5,9.5 L5.5,10 L4.5,10 L4.5,9.5 L4.5,5.5 L0.5,5.5 L0,5.5 L0,4.5 L0.5,4.5 L4.5,4.5 L4.5,0.5 L4.5,0 L5.5,0 L5.5,0.5 L5.5,4.5 Z"/>
                 </svg>
             </span>
-          Create Participant
+          참여자 생성
         </button>
       </div>
     </div>
@@ -179,13 +179,13 @@
           <thead class="thead">
             <tr class="thead-cols">
               
-                  <th class="info">tradeId</th>
+                  <th class="info">거래 ID</th>
               
-                  <th class="info">firstName</th>
+                  <th class="info">이름</th>
               
-                  <th class="info">lastName</th>
+                  <th class="info">성</th>
               
-                <th class="info-actions">Actions</th>
+                <th class="info-actions">활동기록</th>
             </tr>
           </thead>
           <tbody>

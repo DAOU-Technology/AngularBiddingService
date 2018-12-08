@@ -16,8 +16,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addTransactionModalLabel">Create Transaction</h4>
-        <p class="modal-intro">Enter the required values below.</p>
+        <h4 class="modal-title" id="addTransactionModalLabel">Transaction 생성</h4>
+        <p class="modal-intro">필수 정보를 입력해주세요.</p>
       </div>
       <form [formGroup]="myForm">
         <div class="modal-body">
@@ -27,7 +27,7 @@
 
             
               <div class="form-group text-left">
-                <label for="listingId">listingId</label>
+                <label for="listingId">리스팅 ID</label>
                 
                   <input formControlName="listingId" type="text" class="form-control">
                 
@@ -37,7 +37,7 @@
 
             
               <div class="form-group text-left">
-                <label for="reservePrice">reservePrice</label>
+                <label for="reservePrice">최저 경매 가격</label>
                 
                   <input formControlName="reservePrice" type="number" step='any' class="form-control">
                 
@@ -47,7 +47,7 @@
 
             
               <div class="form-group text-left">
-                <label for="product">product</label>
+                <label for="product">상품</label>
                 
                     <textarea formControlName="product" class="form-control" rows="3"></textarea>
                 
@@ -63,8 +63,8 @@
 
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">Confirm</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">취소</button>
+            <button (click)="addTransaction(myForm);" type="submit" class="btn btn-success" data-dismiss="modal">확인</button>
         </div>
       </form>
     </div>
@@ -78,7 +78,7 @@
 
   <div class="row">
     <div class="col-md-12">
-        <h1 class="transaction-title" id='transactionName'>StartBidding</h1>
+        <h1 class="transaction-title" id='transactionName'>입찰 시작</h1>
     </div>
   </div>
   <br>
@@ -86,20 +86,20 @@
     <div class="col-md-12">
       <div class="row">
         <div class="col-md-12">
-          When invoked, this transaction will have the following attributes:
+          입찰이 완료되면 다음과 같은 속성을 갖게됩니다.
           <br>
           <ul>
             
               
-                <li><span class="attribute"><b>listingId</b></span></li>
+                <li><span class="attribute"><b>리스팅 ID</b></span></li>
               
             
               
-                <li><span class="attribute"><b>reservePrice</b></span></li>
+                <li><span class="attribute"><b>최저 경매 가격</b></span></li>
               
             
               
-                <li><span class="attribute"><b>product</b></span></li>
+                <li><span class="attribute"><b>상품</b></span></li>
               
             
               
