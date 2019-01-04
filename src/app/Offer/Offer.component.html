@@ -16,7 +16,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="addTransactionModalLabel">거래 생성</h4>
+        <h4 class="modal-title" id="addTransactionModalLabel">경매 입찰</h4>
         <p class="modal-intro">필수 정보를 입력해주세요.</p>
       </div>
       <form [formGroup]="myForm">
@@ -27,7 +27,7 @@
 
 
               <div class="form-group text-left">
-                <label for="bidPrice">값</label>
+                <label for="bidPrice">입찰가</label>
 
                   <input formControlName="bidPrice" type="number" step='any' class="form-control">
 
@@ -37,7 +37,7 @@
 
 
               <div class="form-group text-left">
-                <label for="listing">내역</label>
+                <label for="listing">경매 대상 품목</label>
 
                     <textarea formControlName="listing" class="form-control" rows="3"></textarea>
 
@@ -47,7 +47,7 @@
 
 
               <div class="form-group text-left">
-                <label for="member">멤버</label>
+                <label for="member">판매자</label>
 
                     <textarea formControlName="member" class="form-control" rows="3"></textarea>
 
